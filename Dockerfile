@@ -8,8 +8,8 @@ RUN apt-get -y install apache2 php git
 
 # Install apache and deploying php sample  application
 RUN rm -rf /var/www/html/*
-RUN git clone https://github.com/sairam484/samplephp-for-docker-build.git /var/www/html
-
+# RUN git clone https://github.com/sairam484/samplephp-for-docker-build.git /var/www/html
+COPY index.php /var/www/html
 WORKDIR /var/www/html
 
 #COPY samplephp/*  /var/www/html/
